@@ -1,0 +1,255 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: palegoldenrod;
+}
+.grid-container{
+  width: 100%;
+   gap: 15px;
+   padding: 20px;
+  height: 100vh;
+  border: 5px solid black;
+  background-color: lightgray;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 'a a a'
+              'b c c'
+              'b d e'
+              'f f f';
+  
+ color: white;
+font-size: 1.5rem;
+text-align: center;
+place-self: center;
+}
+.header{
+   border: 2px solid black;
+   background-image: linear-gradient( to bottom right, rgb(44, 44, 101), rgba(0, 0, 255, 0.377));
+   grid-area: a ;
+}
+.aside{
+    border: 2px solid black;
+    background-image: linear-gradient(to bottom, rgb(173, 216, 230), rgba(173, 216, 230, 0.507));
+    grid-area: b ;
+}
+.content1{
+    border: 2px solid black;
+    background-image: linear-gradient( to right, blue,  rgba(0, 0, 255, 0.581));
+    grid-area: c;
+}
+.content2{
+    border: 2px solid black;
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 255, 0.978), rgba(0, 0, 255, 0.386));
+    
+}
+.content3{
+    border: 2px solid black;
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 255, 0.504), blue);
+    
+}
+.footer{
+    border: 2px solid black;
+    background-image: linear-gradient(to right, rgba(19, 5, 29, 0.959), rgba(76, 0, 130, 0.542));
+    grid-area: f;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    border: 5px solid black;
+    display: grid;
+    background-color: rgba(169, 169, 169, 0.91);
+    gap: 10px;
+    padding: 10px;
+    grid-template-columns: repeat(100px 100px 100px 100px);
+    grid-template-areas: 'a b b c'
+                          'a d e f '
+                          'a g h f';
+    text-align: center;
+    font-size: 1.2rem;
+    place-self: center;
+    
+}
+.item{
+    border: 2px solid black;
+}
+.item1{
+    background-color: lightgreen;
+    grid-area: a;
+}
+.item2{
+    background-color: lightgreen;
+    grid-area: b;
+}
+.item3{
+    background-color: red;
+    grid-area: c;
+}
+.item4{
+    background-color: rgb(215, 215, 29);
+    grid-area: d;
+}
+.item5{
+    background-color: red;
+    grid-area: e;
+}
+.item6{
+    background-color: lightgreen;
+    grid-area: f;
+}
+.item7{
+    background-color: red;
+}
+.item8{
+    background-color: rgb(222, 222, 17);
+}
+.bg-container{
+    width: 100%;
+    height: 100vh;
+    border: 5px solid black;
+    display: grid;
+    background-color: lavender;
+    gap: 10px;
+    padding: 20px;
+    place-self: center;
+    grid-template-columns: 150px 150px 1fr 150px 150px;;
+    grid-template-areas: 'a  b b c c '
+                          'd b b e e '
+                          'f g h i j'
+                          ' k l h m n';
+                          
+
+    
+}
+.box{
+ border: 2px solid black;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+}
+.text{
+
+    background-color: whitesmoke;
+    transform: rotate(-45deg);
+    padding: 6px;
+    background-color: white;
+}
+.box1{
+   grid-area: b ;
+    background-image: linear-gradient(to left bottom, rgba(173, 216, 230, 0.714),40%,rgba(238, 130, 238, 0.549));
+}
+.box2{
+    grid-area: h;
+     background-image:linear-gradient(to right,rgba(173, 216, 230, 0.729), 40%, rgba(238, 130, 238, 0.553)) ;
+}
+.box3{
+    grid-area: c;
+     background-image: linear-gradient(to right, lightblue, rgba(173, 216, 230, 0.353));
+}
+.box4{
+    background-image: linear-gradient(to right, lightblue, rgba(173, 216, 230, 0.353));
+    grid-area: e;
+}
+.box5, .box6, .box7, .box9, .box10, .box11, .box12, .box13, .box14, .box8{
+
+background-image: linear-gradient(to right, rgba(255, 182, 193, 0.422),lightpink);
+}
+.box5{
+    grid-area: a;
+}
+.box6{
+    grid-area: d;
+}
+.box8{
+    grid-area: k;
+}
+.box7{
+    grid-area: f;
+}
+.box10{
+    grid-area: l;
+}
+
+@media screen and (max-width: 600px){
+    .grid-container{
+        grid-template-columns: repeat(1, 1fr) ;
+        grid-template-areas: 'a'
+                            'b'
+                            'c'
+                            'd'
+                            'e'
+                            'f';
+                          
+    }
+   .container{
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: 'a'
+                            'b'
+                            'c'
+                            'd'
+                            'e'
+                            'f'
+                            'g'
+                            'h';
+                          
+    
+   }
+   .bg-container{
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: 'a'
+                            'b'
+                            'c'
+                            'd'
+                            'e'
+                            'f'
+                            'g'
+                            'h'
+                            'i'
+                            'j'
+                            'k'
+                            'l'
+                            'm'
+                            'n';
+                          
+   }
+   .text{
+    font-size: 12px;
+   }
+    
+}
+
+@media screen and (min-width: 640px) and (max-width: 900px) {
+    grid-container{
+        grid-template-columns: repeat(2, 1fr) ;
+        grid-template-areas: 'a  b'
+                            'c d'
+                            'e f';
+                          
+    }
+   .container{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:    'a b'
+                            'c d'
+                            'e  f'
+                            'g h';
+                          
+    
+   }
+   .bg-container{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:    'a b'
+                            'c d'
+                            'e f'
+                            'g h'
+                            'i j'
+                            'k l'
+                            'm n';
+                          
+   }
+}
+
+   
